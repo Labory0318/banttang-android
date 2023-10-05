@@ -12,3 +12,17 @@
 ## Application Version
 > minSdkVersion : 26<br>
 > targetSdkVersion : 32
+
+## Directory
+
+### app
+Presentation Layer, 화면 및 앱 내 기능, 의존성 주입 모듈
+
+### core
+앱의 공통기능 모듈
+
+### data
+Data Layer, domain의 추상적인 부분 구현 모듈
+
+### domain
+Domain Layer, 비즈니스 로직 모듈
