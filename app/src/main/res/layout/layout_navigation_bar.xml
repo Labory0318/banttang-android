@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <import type="kotlin.jvm.functions.Function0" />
+
+        <import type="kotlin.Unit" />
+
+        <variable
+            name="title"
+            type="String"
+            />
+
+        <variable
+            name="backButtonVisible"
+            type="Boolean"
+            />
+
+        <variable
+            name="backAction"
+            type="Function0&lt;Unit>"
+            />
+
+        <variable
+            name="optionTitle"
+            type="String"
+            />
+
+        <variable
+            name="optionIcon"
+            type="android.graphics.drawable.Drawable"
+            />
+
+        <variable
+            name="optionAction"
+            type="Function0&lt;Unit>"
+            />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+
+            <com.google.android.material.appbar.MaterialToolbar
+                style="@style/Widget.MaterialComponents.Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:background="@color/transparent"
+                    android:onClick="@{v -> backAction.invoke()}"
+                    android:padding="@dimen/small_dp"
+                    android:src="@drawable/ic_back"
+                    app:isVisible="@{backButtonVisible}"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@{title}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/navigation_title"
+                    android:textStyle="bold"
+                    tools:text="@string/title"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@color/transparent"
+                    android:onClick="@{v -> optionAction.invoke()}"
+                    android:text="@{optionTitle}"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/navigation_option_button_size"
+                    app:isVisible="@{optionTitle != null}"
+                    tools:text="@string/option"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/small_dp"
+                    android:background="@color/transparent"
+                    android:onClick="@{v -> optionAction.invoke()}"
+                    android:padding="@dimen/small_dp"
+                    android:src="@{optionIcon}"
+                    app:isVisible="@{optionIcon != null}"
+                    tools:src="@drawable/ic_more_vertical"
+                    />
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <View
+                style="@style/Underline"
+                android:layout_width="match_parent"
+                />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

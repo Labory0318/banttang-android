@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Underline">
+        <item name="android:background">@color/underline</item>
+        <item name="android:layout_height">@dimen/default_line_width_dp</item>
+    </style>
+
+    <style name="BottomSheetUnderline">
+        <item name="android:background">@color/gray1</item>
+        <item name="alpha">0.5</item>
+        <item name="android:layout_height">@dimen/default_line_width_dp</item>
+    </style>
+
+    <style name="PrimaryRoundButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/button_title_sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/btn_primary_round_10</item>
+        <item name="android:outlineProvider">none</item>
+    </style>
+
+    <style name="Gray4RoundButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/button_title_sp</item>
+        <item name="android:background">@drawable/btn_gray4_round_10</item>
+        <item name="android:outlineProvider">none</item>
+    </style>
+
+    <style name="GrayRoundBorderButton">
+        <item name="android:textStyle">bold</item>"
+        <item name="android:textSize">@dimen/button_title_sp</item>
+        <item name="android:background">@drawable/btn_border_gray_round_10</item>
+        <item name="android:outlineProvider">none</item>
+    </style>
+
+    <style name="WhiteButton">
+        <item name="android:background">@drawable/btn_white</item>
+        <item name="android:outlineProvider">none</item>
+    </style>
+
+    <style name="CircleCheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/cb_circle</item>
+        <item name="android:textColor">@color/color_black_selectable</item>
+        <item name="android:paddingStart">@dimen/small_dp</item>
+        <item name="android:textSize">@dimen/medium_sp</item>
+    </style>
+
+</resources>

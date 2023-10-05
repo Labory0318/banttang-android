@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/yellow1" />
+    <item
+        android:width="137dp"
+        android:height="87dp"
+        android:drawable="@drawable/banttang_logo"
+        android:gravity="center"
+        />
+</layer-list>

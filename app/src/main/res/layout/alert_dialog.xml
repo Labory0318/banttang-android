@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:checkable="false"
+        android:clickable="false"
+        android:focusable="false"
+        app:cardCornerRadius="15dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="145dp"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="20dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minLines="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/title"
+                />
+
+            <TextView
+                android:id="@+id/message_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_dp"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/title_text_view"
+                tools:text="message"
+                android:textColor="@color/black"
+                />
+
+            <LinearLayout
+                android:id="@+id/button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/message_text_view"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/negative_button"
+                    style="@style/GrayRoundBorderButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:minHeight="40dp"
+                    android:textSize="@dimen/small_sp"
+                    android:outlineProvider="none"
+                    tools:text="@string/cancel"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/positive_button"
+                    style="@style/PrimaryRoundButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="40dp"
+                    android:textSize="@dimen/small_sp"
+                    android:outlineProvider="none"
+                    tools:text="@string/ok"
+                    />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

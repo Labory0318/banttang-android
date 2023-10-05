@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.hproject.banttang.presentation.scene.login.LoginFragmentViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/yellow1"
+        android:clickable="true"
+        android:focusable="true"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/banttnag_roun_icon_image_view"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:layout_marginTop="158.5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/banttang_round_icon"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/login_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/very_small_dp"
+            android:fontFamily="@font/dongle_regular"
+            android:gravity="center"
+            android:text="@string/login_title"
+            android:textColor="@color/black1"
+            android:textSize="@dimen/very_large_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/banttnag_roun_icon_image_view"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="265.5dp"
+            android:background="@drawable/bg_top_left_round_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/kakao_sign_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="@dimen/common_dp"
+                android:layout_marginTop="77.5dp"
+                android:layout_marginEnd="@dimen/common_dp"
+                android:background="@drawable/bg_yellow2_round"
+                android:foreground="?selectableItemBackground"
+                android:gravity="center"
+                android:onClick="@{v -> viewModel.onKakaoLoginButtonClick()}"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="@dimen/very_small_dp"
+                    app:srcCompat="@drawable/kakao_logo"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_kakao_sign"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/small_sp"
+                    android:textStyle="bold"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/google_sign_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="@dimen/common_dp"
+                android:layout_marginTop="@dimen/medium_dp"
+                android:layout_marginEnd="@dimen/common_dp"
+                android:background="@drawable/bg_border_black_round"
+                android:foreground="?selectableItemBackground"
+                android:gravity="center"
+                android:onClick="@{v -> viewModel.onGoogleLoginClick()}"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kakao_sign_linear_layout"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="18.5dp"
+                    android:layout_height="18.5dp"
+                    android:layout_marginEnd="@dimen/very_small_dp"
+                    app:srcCompat="@drawable/google_logo"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_google_sign"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/small_sp"
+                    android:textStyle="bold"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

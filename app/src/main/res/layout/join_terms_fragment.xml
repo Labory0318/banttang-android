@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <import type="com.hproject.banttang.domain.common.define.TermsTypeDefine" />
+
+        <variable
+            name="joinTermsViewModel"
+            type="com.hproject.banttang.presentation.scene.join.terms.JoinTermsFragmentViewModel"
+            />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <include
+            android:id="@+id/navigation_bar"
+            layout="@layout/layout_navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:backAction="@{joinTermsViewModel::onBackButtonClick}"
+            app:backButtonVisible="@{true}"
+            app:title="@{@string/join}"
+            />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/content_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/common_dp"
+            app:layout_constraintBottom_toTopOf="@id/terms_agree_button"
+            app:layout_constraintTop_toBottomOf="@+id/navigation_bar"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/join_terms_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/large_sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/agree_all_checkbox"
+                    style="@style/CircleCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_dp"
+                    android:checked="@{joinTermsViewModel.isAllTermsAgree}"
+                    android:onClick="@{v -> joinTermsViewModel.onAllCheckboxClick()}"
+                    android:text="@string/join_terms_checkbox_message"
+                    android:textSize="@dimen/medium_sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/terms_description_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_dp"
+                    android:text="@string/join_terms_description"
+                    android:textSize="@dimen/small_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/agree_all_checkbox"
+                    />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/terms_description_text_view"
+                    >
+
+                    <View
+                        style="@style/Underline"
+                        android:layout_width="match_parent"
+                        />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/service_terms_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/service_terms_check_box"
+                            style="@style/CircleCheckBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/small_dp"
+                            android:checked="@{joinTermsViewModel.serviceTermsAgree}"
+                            android:onCheckedChanged="@{(v,isChecked) -> joinTermsViewModel.onTermsChanged(TermsTypeDefine.SERVICE, isChecked)}"
+                            android:text="@string/join_terms_service"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/small_sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/service_terms_button"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/service_terms_button"
+                            style="@style/WhiteButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:onClick="@{v -> joinTermsViewModel.onTermsClick(TermsTypeDefine.SERVICE)}"
+                            android:paddingHorizontal="@dimen/small_dp"
+                            android:src="@drawable/ic_arrow_right"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        style="@style/Underline"
+                        android:layout_width="match_parent"
+                        />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/privacy_policy_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/privacy_policy_check_box"
+                            style="@style/CircleCheckBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/small_dp"
+                            android:checked="@{joinTermsViewModel.privacyPolicyAgree}"
+                            android:onCheckedChanged="@{(v,isChecked) -> joinTermsViewModel.onTermsChanged(TermsTypeDefine.PRIVACY_POLICY, isChecked)}"
+                            android:text="@string/join_terms_privacy_policy"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/small_sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/privacy_policy_button"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/privacy_policy_button"
+                            style="@style/WhiteButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:onClick="@{v -> joinTermsViewModel.onTermsClick(TermsTypeDefine.PRIVACY_POLICY)}"
+                            android:paddingHorizontal="@dimen/small_dp"
+                            android:src="@drawable/ic_arrow_right"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        style="@style/Underline"
+                        android:layout_width="match_parent"
+                        />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/gps_terms_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/gps_terms_check_box"
+                            style="@style/CircleCheckBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/small_dp"
+                            android:checked="@{joinTermsViewModel.gpsTermsAgree}"
+                            android:onCheckedChanged="@{(v,isChecked) -> joinTermsViewModel.onTermsChanged(TermsTypeDefine.GPS, isChecked)}"
+                            android:text="@string/join_terms_gps"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/small_sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/gps_terms_button"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/gps_terms_button"
+                            style="@style/WhiteButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:onClick="@{v -> joinTermsViewModel.onTermsClick(TermsTypeDefine.GPS)}"
+                            android:paddingHorizontal="@dimen/small_dp"
+                            android:src="@drawable/ic_arrow_right"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        style="@style/Underline"
+                        android:layout_width="match_parent"
+                        />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/terms_agree_button"
+            style="@style/PrimaryRoundButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_dp"
+            android:enabled="@{joinTermsViewModel.isAllTermsAgree}"
+            android:onClick="@{v -> joinTermsViewModel.onTermsAgreeButtonClick()}"
+            android:text="@string/agree"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:enabled="false"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

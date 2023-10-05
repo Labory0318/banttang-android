@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--text size-->
+    <dimen name="navigation_title">@dimen/medium_sp</dimen>
+    <dimen name="navigation_option_button_size">16sp</dimen>
+    <dimen name="button_title_sp">16sp</dimen>
+
+    <dimen name="nano_sp">10sp</dimen>
+    <dimen name="micro_sp">12sp</dimen>
+    <dimen name="small_sp">14sp</dimen>
+    <dimen name="medium_small_sp">16sp</dimen>
+    <dimen name="medium_sp">18sp</dimen>
+    <dimen name="large_sp">22sp</dimen>
+    <dimen name="very_large_sp">28sp</dimen>
+
+    <!--padding & margin-->
+    <dimen name="very_large_dp">60dp</dimen>
+    <dimen name="large_dp">30dp</dimen>
+    <dimen name="common_dp">20dp</dimen>
+    <dimen name="medium_dp">15dp</dimen>
+    <dimen name="small_dp">10dp</dimen>
+    <dimen name="very_small_dp">5dp</dimen>
+    <dimen name="nano_dp">3dp</dimen>
+
+    <!--image-->
+    <dimen name="image_150dp">150dp</dimen>
+    <dimen name="image_85dp">85dp</dimen>
+    <dimen name="image_65dp">65dp</dimen>
+    <dimen name="image_30dp">30dp</dimen>
+    <dimen name="image_45dp">45dp</dimen>
+
+    <!--line-->
+    <dimen name="default_line_width_dp">0.5dp</dimen>
+
+    <!--etc-->
+    <dimen name="default_image_size_dp">60dp</dimen>
+    <dimen name="corner_radius_10dp">10dp</dimen>
+    <dimen name="corner_radius_20dp">20dp</dimen>
+
+</resources>

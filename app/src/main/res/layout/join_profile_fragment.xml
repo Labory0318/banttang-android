@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <variable
+            name="joinProfileViewModel"
+            type="com.hproject.banttang.presentation.scene.join.profile.JoinProfileFragmentViewModel"
+            />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        >
+
+        <include
+            android:id="@+id/navigation_bar"
+            layout="@layout/layout_navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:backAction="@{joinProfileViewModel::onBackButtonClick}"
+            app:backButtonVisible="@{true}"
+            app:title="@{@string/join}"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/profile_image_button"
+            android:layout_width="@dimen/image_150dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/large_dp"
+            android:background="@color/transparent"
+            android:contentDescription="@null"
+            android:onClick="@{v -> joinProfileViewModel.onPickImagesButtonClick()}"
+            android:padding="@dimen/small_dp"
+            android:src="@drawable/ic_profile_large_placeholder"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/navigation_bar"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_dp"
+            app:layout_constraintBottom_toBottomOf="@id/profile_image_button"
+            app:layout_constraintEnd_toEndOf="@id/profile_image_button"
+            app:srcCompat="@drawable/ic_camera_circle"
+            />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nickname_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_dp"
+            android:gravity="center"
+            android:hint="@string/nickname"
+            android:maxLength="5"
+            android:text="@={joinProfileViewModel.name}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image_button"
+            app:layout_constraintWidth_percent="0.5"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/nickname_icon_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/nickname_edit_text"
+            app:layout_constraintEnd_toEndOf="@id/nickname_edit_text"
+            app:layout_constraintTop_toTopOf="@id/nickname_edit_text"
+            app:srcCompat="@drawable/ic_edit"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/join_button"
+            style="@style/PrimaryRoundButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/common_dp"
+            android:layout_marginBottom="@dimen/common_dp"
+            android:onClick="@{v -> joinProfileViewModel.onJoinButtonClick()}"
+            android:text="@string/join"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

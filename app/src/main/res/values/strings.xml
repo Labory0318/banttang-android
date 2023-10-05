@@ -1,0 +1,263 @@
+<resources>
+    <string name="google_server_client_id" translatable="false">344187623552-f7srvc0g2tpf0jqm8mhq817tktutkdhs.apps.googleusercontent.com</string>
+    <string name="kakao_app_key" translatable="false">3c153b2efbfbf6c22068f4de66af1e62</string>
+    <string name="kakao_native_key" translatable="false">kakao3c153b2efbfbf6c22068f4de66af1e62</string>
+    <string name="naver_map_client_id">wqju127ylt</string>
+
+    <string name="banttang_service_terms_url">https://hside-project.github.io/banttang-landing/#/app/service</string>
+    <string name="banttang_privacy_policy_url">https://hside-project.github.io/banttang-landing/#/app/privacy</string>
+    <string name="banttang_gps_terms_url">https://hside-project.github.io/banttang-landing/#/app/location</string>
+
+    <!--Version-->
+    <string name="version_retry_msg">버전 정보를 불러오는데 실패했습니다.\n다시 시도하시겠습니까?</string>
+    <string name="version_need_update_msg">신규 버전으로 업데이트가 필요합니다.</string>
+    <string name="version_code_format">버전 V.%s</string>
+
+    <string name="object">물건</string>
+    <string name="update">업데이트</string>
+    <string name="zero">0</string>
+    <string name="ok">확인</string>
+    <string name="cancel">취소</string>
+    <string name="edit">수정</string>
+    <string name="delete">삭제</string>
+    <string name="etc">기타</string>
+    <string name="all">전체</string>
+    <string name="agree">동의</string>
+    <string name="retry">재시도</string>
+    <string name="finish">종료</string>
+    <string name="login">로그인</string>
+    <string name="logout">로그아웃</string>
+    <string name="withdrawal">회원탈퇴</string>
+    <string name="title">제목</string>
+    <string name="content">내용</string>
+    <string name="name">이름</string>
+    <string name="nickname">닉네임</string>
+    <string name="registration">등록</string>
+    <string name="select">선택</string>
+    <string name="complete">완료</string>
+    <string name="notice">공지사항</string>
+    <string name="select_image">사진 선택</string>
+    <string name="image_count_format">%d/%d</string>
+    <string name="option">설정</string>
+    <string name="participant_count">모집인원</string>
+    <string name="participant_max_count">(최대 %d인)</string>
+    <string name="deal_title_hint">거래글 제목</string>
+    <string name="not_selected">미선택</string>
+    <string name="price">금액</string>
+    <string name="price_unit">원</string>
+    <string name="price_hint">입력해주세요</string>
+    <string name="dutch_hint">모집인원과 금액을 설정해보세요</string>
+    <string name="dutch_pay_price">N빵 금액</string>
+    <string name="trading_place">거래 장소</string>
+    <string name="select_place">장소 선택</string>
+    <string name="address">주소</string>
+    <string name="detail_address">상세 주소</string>
+    <string name="remain_time">남은 시간</string>
+    <string name="thumbnail_title">대표 사진</string>
+    <string name="comment">댓글</string>
+    <string name="comment_count_with_data">댓글(%s)</string>
+    <string name="information">정보</string>
+    <string name="deal_writer">주최자</string>
+    <string name="slash">/</string>
+    <string name="formatted_price_with_unit">%s원</string>
+    <string name="formatted_dutch_price_with_unit">인당&#160;%s원</string>
+    <string name="complete_deal">모집 종료</string>
+    <string name="formatted_string">%s</string>
+    <string name="beongae_timeout">번개 종료</string>
+    <string name="remain_time_format">%d시간 %d분 %d초</string>
+
+    <!--Login-->
+    <string name="login_title">소셜로그인으로 반땅을 시작해보세요.</string>
+    <string name="login_kakao_sign">카카오로 시작하기</string>
+    <string name="login_google_sign">구글로 시작하기</string>
+
+    <!--DealCategory-->
+    <string name="beongae">번개</string>
+    <string name="banttang">반땅</string>
+
+    <!--DealCategoryDetail-->
+    <string name="category">카테고리</string>
+    <string name="meeting_time">모임시간</string>
+    <string name="category_detail">카테고리 상세</string>
+    <string name="digital">디지털기기</string>
+    <string name="appliances">생활가전</string>
+    <string name="food">식품</string>
+    <string name="clothing">의류/잡화</string>
+    <string name="beauty">미용</string>
+    <string name="pet_supplies">반려동물</string>
+
+    <!--ReportCategory-->
+    <string name="report">신고</string>
+    <string name="user_report">사용자 신고</string>
+    <string name="deal_report">거래글 신고</string>
+    <string name="comment_report">댓글 신고</string>
+    <string name="pornography">음란물</string>
+    <string name="illegal_information">불법 정보</string>
+    <string name="harmful_content">유해한 정보</string>
+    <string name="vilification">욕설</string>
+    <string name="disclosure_of_personal_information">개인 정보 유출</string>
+    <string name="report_category_title">신고하시는 이유를 선택해주세요.</string>
+
+    <!--ReportDetail-->
+    <string name="report_detail_title">좀 더 자세히 설명해주세요.</string>
+    <string name="report_detail_input_hint">내용\n\n\- 자세한 설명으로 신고에 도움을 주세요.</string>
+
+    <!--Signing-->
+    <string name="join">회원가입</string>
+    <string name="profile_image_input_alert">사진을 설정해주세요.</string>
+    <string name="name_input_request">이름을 입력해주세요.</string>
+
+    <!--JoinTerms-->
+    <string name="service_terms">서비스 이용약관</string>
+    <string name="privacy_policy">개인정보 처리 방침</string>
+    <string name="gps_terms">위치 기반 서비스 이용약관</string>
+
+    <string name="join_terms_title">서비스 이용 동의</string>
+    <string name="join_terms_checkbox_message">모두 동의합니다.</string>
+    <string name="join_terms_description">전체 동의는 필수 및 선택 정보에 대한 동의도 포함되어 있습니다.\n선택항목에 대한 동의를 거부하는 경우에도 서비스 이용은 가능합니다.</string>
+    <string name="join_terms_service">(필수) 서비스 이용약관</string>
+    <string name="join_terms_privacy_policy">(필수) 개인정보 처리방침</string>
+    <string name="join_terms_gps">(필수) 위치 기반 서비스 이용약관</string>
+
+    <!--Home-->
+    <string name="home">홈</string>
+    <string name="my_deals">My 거래</string>
+    <string name="my_page">마이페이지</string>
+    <string name="deal_beongae_remain_time">%s 종료</string>
+
+    <!--MainTab-->
+    <string name="deal_list_empty">거래글이 존재하지 않아요.\n먼저 거래글을 등록해보세요!</string>
+
+    <!--MyDeals-->
+    <string name="participated_deals">참여중인 거래</string>
+
+    <!--DealRegistration-->
+    <string name="deal_registration_navigation_title">글쓰기</string>
+    <string name="deal_registration_image_alert">사진을 등록해주세요.</string>
+    <string name="deal_registration_image_max_alert">사진은 최대 %d장 등록 가능합니다.</string>
+    <string name="deal_registration_title_alert">거래글 제목을 입력해주세요.</string>
+    <string name="deal_registration_category_detail_alert">카테고리 상세를 선택해주세요.</string>
+    <string name="deal_registration_price_alert">금액을 입력해주세요.</string>
+    <string name="deal_registration_location_alert">거래 장소를 설정해주세요.</string>
+    <string name="deal_registration_content_alert">상세 설명을 입력해주세요.</string>
+    <string name="deal_registration_success_msg">등록했어요.</string>
+    <string name="deal_registration_cancel_confirm_title">거래글 등록 취소</string>
+    <string name="deal_registration_cancel_confirm_msg">거래글 등록을 취소하시겠어요?</string>
+    <string name="deal_registration_content_hint">내용\n\n\- 식당 이름, 메뉴가 있으면 좋아요.\n\n\- 만나는 장소 등의 정보는 비밀 댓글로 남겨보세요.\n참여하는 사람들만 볼 수 있답니다.\n\n예\) oo식당 ㅁㅁ점에서 삼겹살 드실분 구해요~</string>
+    <string name="deal_registration_max_participant_excess">모집인원은 최대 %d인까지 가능해요.</string>
+    <string name="deal_registration_max_participant_under">모집인원은 최소 %d인부터 가능해요.</string>
+    <string name="deal_registration_min_price_under">금액설정은 %d원 이상부터 가능해요</string>
+
+    <!--DealDetail-->
+    <string name="deal_detail_max_participants_dutch_pay_price_format">최대 모집 시 인당 %s원</string>
+    <string name="deal_detail_participation_count_format">%d/%d</string>
+    <string name="deal_detail_complete_deal_alert_msg">모집을 종료하시겠어요?</string>
+    <string name="deal_detail_complete_deal_success_msg">완료 처리 되었어요.</string>
+    <string name="deal_detail_participate">참여하기</string>
+    <string name="deal_detail_participate_success_msg">참여되었어요.</string>
+    <string name="deal_detail_participate_cancel">참여 취소하기</string>
+    <string name="deal_detail_participate_cancel_alert_msg">정말 취소하시겠어요?</string>
+    <string name="deal_detail_participate_cancel_success_msg">참여가 취소되었어요.</string>
+    <string name="deal_detail_beongae_time_remain_format">%s 남음</string>
+
+    <!--DealDetailEdit-->
+    <string name="deal_detail_edit_navigation_title">거래글 수정</string>
+    <string name="deal_detail_edit_image_alert">사진을 등록해주세요.</string>
+    <string name="deal_detail_edit_image_max_alert">사진은 최대 %d장 등록 가능합니다.</string>
+    <string name="deal_detail_edit_title_alert">거래글 제목을 입력해주세요.</string>
+    <string name="deal_detail_edit_category_detail_alert">카테고리 상세를 선택해주세요.</string>
+    <string name="deal_detail_edit_price_alert">금액을 입력해주세요.</string>
+    <string name="deal_detail_edit_content_alert">상세 설명을 입력해주세요.</string>
+    <string name="deal_detail_edit_success_msg">거래글이 수정되었습니다.</string>
+    <string name="deal_detail_edit_cancel_confirm_msg">거래글 수정을 중단하시겠어요?</string>
+
+    <!--DealDelete-->
+    <string name="deal_detail_delete_confirm_title">거래글 삭제</string>
+    <string name="deal_detail_delete_success_msg">거래글이 삭제되었습니다.</string>
+    <string name="deal_detail_delete_confirm_msg">거래글을 삭제하시겠습니까?</string>
+
+    <!--DealComment-->
+    <string name="deal_comment_description">댓글을 사용할 때는 타인을 존중해주세요.</string>
+    <string name="deal_comment_input_hint">댓글 추가…</string>
+    <string name="deal_comment_created_time_pattern">yyyy-MM-dd H:mm</string>
+    <string name="deal_comment_list_empty">아직 댓글이 없어요!</string>
+    <string name="deal_comment_deleted_msg">삭제된 댓글</string>
+
+    <!--DealCommentEdit-->
+    <string name="deal_comment_update_success_msg">댓글이 수정됐어요.</string>
+
+    <!--DealCommentMenu-->
+    <string name="deal_comment_menu_delete_confirm_title">댓글 삭제</string>
+    <string name="deal_comment_menu_delete_confirm_msg">댓글을 완전히 삭제할까요?</string>
+    <string name="deal_comment_delete_success_msg">댓글이 삭제됐어요.</string>
+
+    <!--Report-->
+    <string name="report_description">신고 내용을 입력해주세요.</string>
+    <string name="report_confirm_msg">신고하시겠어요? 허위 신고일 경우 패널티를 받을 수 있어요.</string>
+    <string name="report_success_msg">신고됐어요. 관리자 확인 후 빠른 조치 취하도록 하겠습니다.</string>
+
+    <!--MapCommon-->
+    <string name="map_invalid_address">주소를 가져올 수 없습니다.</string>
+    <string name="map_camera_on_moving">위치 이동 중</string>
+
+    <!--MapSelectLocation-->
+    <string name="map_select_location_button">지도의 위치로 설정</string>
+
+    <!--UserProfileEdit-->
+    <string name="user_profile_edit_navigation_title">내 정보 수정</string>
+    <string name="user_profile_edit_image_alert">프로필 이미지를 선택해주세요.</string>
+    <string name="user_profile_edit_nickname_alert">닉네임을 입력해주세요.</string>
+    <string name="user_profile_edit_confirm_msg">정보를 수정하시겠어요?</string>
+    <string name="user_profile_edit_success_message">정보가 변경되었어요!</string>
+    <string name="user_profile_edit_logout_confirm_msg">로그아웃하시겠어요?</string>
+
+    <!--UserWithdrawal-->
+    <string name="user_withdrawal_title">%s님,\n탈퇴하기 전에 확인해주세요.</string>
+    <string name="user_withdrawal_checkbox_message">모두 동의합니다.</string>
+    <string name="user_withdrawal_description1">* 회원 탈퇴 시, 등록한 모든 정보 및 설정 내역이 삭제됩니다.</string>
+    <string name="user_withdrawal_description2">* 삭제된 정보는 복구할 수 없습니다.</string>
+    <string name="user_withdrawal_confirm_msg">반땅 서비스를 탈퇴하시겠습니까?</string>
+    <string name="user_withdrawal_success_msg">그동안 반땅 서비스를 이용해주셔서 감사합니다.</string>
+
+    <!--FAQ-->
+    <string name="faq">1:1 문의</string>
+    <string name="faq_answer">문의글 답변</string>
+    <string name="faq_answer_status_progress">답변 대기</string>
+    <string name="faq_answer_status_completion">답변 완료</string>
+
+    <!--FAQList-->
+    <string name="faq_list_empty">문의사항이 존재하지 않아요!</string>
+
+    <!--FAQRegistration-->
+    <string name="faq_registration_title">1:1 문의글 등록</string>
+    <string name="faq_registration_description">문의 글을 남겨주시면 최대한 빨리 답변드릴게요.\n자세하게 내용을 적어주실수록 답변 드리는 데 도움이 됩니다.</string>
+    <string name="faq_registration_success_msg">1:1 문의글이 등록됐어요.\n문의 글을 남겨주시면 최대한 빨리 답변드릴게요.</string>
+
+    <!--FAQDetail-->
+    <string name="faq_delete_confirm_title">1:1 문의글 삭제</string>
+    <string name="faq_delete_confirm_msg">1:1 문의글을 완전히 삭제할까요?</string>
+    <string name="faq_delete_success_msg">1:1 문의글이 삭제됐어요.</string>
+
+    <!--NoticeList-->
+    <string name="notice_list_created_time_pattern">yyyy-MM-dd H:mm</string>
+    <string name="notice_list_empty">공지사항이 존재하지 않아요!</string>
+
+    <!-- Error -->
+    <string name="error_common">요청에 실패했어요.\n잠시후 다시 시도해주세요.</string>
+    <string name="error_network">네트워크 연결을 확인해주세요!</string>
+    <string name="error_duplicate_join">이미 가입된 회원입니다.</string>
+    <string name="error_deal_not_found">이미 삭제된 거래글입니다.</string>
+    <string name="error_deal_already_completed">이미 완료 처리된 거래글입니다.</string>
+    <string name="error_deal_participant_cancel_count_over">이미 3회 참여 취소하여 재참여가 불가능합니다.</string>
+    <string name="error_deal_participant_unable_to_join">해당 거래에 참여할 수 없습니다.</string>
+    <string name="error_deal_comment_not_found">이미 삭제된 댓글이에요.</string>
+    <string name="error_faq_not_found">이미 삭제된 1:1 문의글이에요.</string>
+    <string name="error_report_exists">이미 신고 접수가 되어 관리자 확인중입니다.</string>
+
+    <!-- App -->
+    <string name="finish_app_confirm_msg">종료하시겠습니까?</string>
+    <string name="quick_tap_twice_back_button">\'뒤로\'버튼을 한번 더 누르면 종료됩니다.</string>
+
+    <string name="price_digits">0123456789,</string>
+    <string name="number_digits">0123456789</string>
+</resources>

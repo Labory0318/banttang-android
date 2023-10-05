@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AutoScrollableViewPagerLayout">
+        <attr name="autoScrollTickMillis" format="integer" />
+        <attr name="autoScrollEnabled" format="boolean" />
+        <attr name="infiniteLoopEnabled" format="boolean" />
+    </declare-styleable>
+</resources>

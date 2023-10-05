@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/splashFragment"
+    >
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.hproject.banttang.presentation.scene.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/splash_fragment"
+        >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@+id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@+id/mainFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.hproject.banttang.presentation.scene.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/login_fragment"
+        >
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@+id/mainFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_loginFragment_to_joinTermsFragment"
+            app:destination="@+id/joinTermsFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.hproject.banttang.presentation.scene.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/main_fragment"
+        />
+
+    <fragment
+        android:id="@+id/joinTermsFragment"
+        android:name="com.hproject.banttang.presentation.scene.join.terms.JoinTermsFragment"
+        android:label="JoinTermsFragment"
+        tools:layout="@layout/join_terms_fragment"
+        >
+        <argument
+            android:name="joinArgument"
+            app:argType="com.hproject.banttang.presentation.scene.join.argument.JoinArgument"
+            />
+        <action
+            android:id="@+id/action_joinTermsFragment_to_joinTermsDetailFragment"
+            app:destination="@+id/joinDetailFragment"
+            />
+        <action
+            android:id="@+id/action_joinTermsFragment_to_joinProfileFragment"
+            app:destination="@+id/joinProfileFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/joinDetailFragment"
+        android:name="com.hproject.banttang.presentation.scene.join.terms.detail.TermsDetailFragment"
+        android:label="JoinDetailTermsFragment"
+        tools:layout="@layout/terms_detail_fragment"
+        >
+        <argument
+            android:name="terms"
+            app:argType="com.hproject.banttang.domain.common.define.TermsTypeDefine"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/joinProfileFragment"
+        android:name="com.hproject.banttang.presentation.scene.join.profile.JoinProfileFragment"
+        android:label="JoinProfileFragment"
+        tools:layout="@layout/join_profile_fragment"
+        >
+        <argument
+            android:name="joinArgument"
+            app:argType="com.hproject.banttang.presentation.scene.join.argument.JoinArgument"
+            />
+    </fragment>
+</navigation>
